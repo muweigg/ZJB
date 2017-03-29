@@ -1,0 +1,391 @@
+<div class="editor-wrap" v-if="isDisplay" @mousedown="someActions">
+    <div class="top-toolbar-wrap">
+        <div class="top-toolbar">
+            <div class="logo icon-logo"></div>
+            <ul class="left-tools clearfix">
+                <li>
+                    <button :disabled="undoNav.length == 0"
+                        @click="undo">
+                        <i class="icon icon-undo"></i>
+                        <span>撤销</span>
+                    </button>
+                </li>
+                <li>
+                    <button :disabled="redoNav.length == 0"
+                        @click="redo">
+                        <i class="icon icon-redo"></i>
+                        <span>恢复</span>
+                    </button>
+                </li>
+                <li>
+                    <button @click="importContract">
+                        <i class="icon icon-import-e"></i>
+                        <span>导入</span>
+                    </button>
+                </li>
+                <li>
+                    <button @click="exportContract">
+                        <i class="icon icon-export-e"></i>
+                        <span>导出</span>
+                    </button>
+                </li>
+            </ul>
+            <ul class="right-tools clearfix">
+                <li><button class="save"
+                        @click="saveContract">保存</button></li>
+                <li><button class="preview"
+                        @click="preview">预览</button></li>
+            </ul>
+        </div>
+
+    </div>
+
+    <div class="editor-body-wrap">
+        <div class="close icon-dialog-close" @click="generatorMode"></div>
+        <!--编辑区域-->
+        <div class="editor-body-left">
+
+            <v-scrollbar classes="contract-body"
+                :speed=100 theme="light"
+                ref="contractBody">
+                <div class="clearfix">
+                    <h1 class="contract-title">
+                        <input type="text" class="editable" :value="contract.name"
+                            v-model="contract.name">
+                    </h1>
+
+                    <template v-if="contract.type == 0">
+                        <div class="contract-header">
+                            <h3>
+                                <label style="width: 50px;">甲方：</label>
+                                <input type="text"
+                                        :value="contract.partyA.name"
+                                        v-model="contract.partyA.name"
+                                        style="width: 480px;">
+                            </h3>
+                            <h3 style="margin-top: 10px;">
+                                <label style="width: 50px;">乙方：</label>
+                                <input type="text"
+                                        :value="contract.partyB.name"
+                                        v-model="contract.partyB.name"
+                                        style="width: 480px;">
+                            </h3>
+                        </div>
+                    </template>
+                    <template v-else-if="contract.type == 1">
+                        <div class="contract-header">
+                            <h3>
+                                <label style="width: 50px;">甲方：</label>
+                                <input type="text"
+                                        :value="contract.partyA.name"
+                                        v-model="contract.partyA.name"
+                                        style="width: 480px;">
+                            </h3>
+                            <div>
+                                <label style="width: 85px;">委托处理人：</label>
+                                <input type="text"
+                                        :value="contract.partyA.client"
+                                        v-model="contract.partyA.client"
+                                        style="width: 110px;">
+                                <label style="width: 70px;margin-left: 10px;">联系电话：</label>
+                                <input type="text"
+                                        :value="contract.partyA.clientPhone"
+                                        v-model="contract.partyA.clientPhone"
+                                        style="width: 247px;">
+                            </div>
+                            <div>
+                                <label style="width: 70px;">公司名称：</label>
+                                <input type="text"
+                                        :value="contract.partyA.companyName"
+                                        v-model="contract.partyA.companyName"
+                                        style="width: 460px;">
+                            </div>
+                            <div>
+                                <label style="width: 70px;">家庭地址：</label>
+                                <input type="text"
+                                        :value="contract.partyA.homeAddress"
+                                        v-model="contract.partyA.homeAddress"
+                                        style="width: 460px;">
+                            </div>
+
+                            <h3 style="margin-top: 10px;">
+                                <label style="width: 50px;">乙方：</label>
+                                <input type="text"
+                                        :value="contract.partyB.name"
+                                        v-model="contract.partyB.name"
+                                        style="width: 480px;">
+                            </h3>
+                            <div>
+                                <label style="width: 85px;">委托处理人：</label>
+                                <input type="text"
+                                        :value="contract.partyB.client"
+                                        v-model="contract.partyB.client"
+                                        style="width: 110px;">
+                                <label style="width: 70px;margin-left: 10px;">联系电话：</label>
+                                <input type="text"
+                                        :value="contract.partyB.clientPhone"
+                                        v-model="contract.partyB.clientPhone"
+                                        style="width: 247px;">
+                            </div>
+                            <div>
+                                <label style="width: 70px;">公司名称：</label>
+                                <input type="text"
+                                        :value="contract.partyB.companyName"
+                                        v-model="contract.partyB.companyName"
+                                        style="width: 460px;">
+                            </div>
+                            <div>
+                                <label style="width: 70px;">家庭地址：</label>
+                                <input type="text"
+                                        :value="contract.partyB.homeAddress"
+                                        v-model="contract.partyB.homeAddress"
+                                        style="width: 460px;">
+                            </div>
+                        </div>
+                    </template>
+                    <template v-else>
+                        <div class="contract-header">
+                            <h3>
+                                <label style="width: 50px;">甲方：</label>
+                                <input type="text"
+                                        :value="contract.partyA.name"
+                                        v-model="contract.partyA.name"
+                                        style="width: 480px;">
+                            </h3>
+                            <div>
+                                <label style="width: 70px;">公司名称：</label>
+                                <input type="text"
+                                        :value="contract.partyA.companyName"
+                                        v-model="contract.partyA.companyName"
+                                        style="width: 460px;">
+                            </div>
+                            <div>
+                                <label style="width: 85px;">营业执照号：</label>
+                                <input type="text"
+                                        :value="contract.partyA.licenseNo"
+                                        v-model="contract.partyA.licenseNo"
+                                        style="width: 445px;">
+                            </div>
+                            <div>
+                                <label style="width: 70px;">公司地址：</label>
+                                <input type="text"
+                                        :value="contract.partyA.companyAddress"
+                                        v-model="contract.partyA.companyAddress"
+                                        style="width: 460px;">
+                            </div>
+                            <div>
+                                <label style="width: 85px;">法定代表人：</label>
+                                <input type="text"
+                                        :value="contract.partyA.legalPerson"
+                                        v-model="contract.partyA.legalPerson"
+                                        style="width: 110px;">
+                                <label style="width: 70px;margin-left: 10px;">联系电话：</label>
+                                <input type="text"
+                                        :value="contract.partyA.legalPersonPhone"
+                                        v-model="contract.partyA.legalPersonPhone"
+                                        style="width: 247px;">
+                            </div>
+                            <div>
+                                <label style="width: 85px;">委托代表人：</label>
+                                <input type="text"
+                                        :value="contract.partyA.client"
+                                        v-model="contract.partyA.client"
+                                        style="width: 110px;">
+                                <label style="width: 70px;margin-left: 10px;">联系电话：</label>
+                                <input type="text"
+                                        :value="contract.partyA.clientPhone"
+                                        v-model="contract.partyA.clientPhone"
+                                        style="width: 247px;">
+                            </div>
+                            
+                            <h3 style="margin-top: 10px;">
+                                <label style="width: 50px;">乙方：</label>
+                                <input type="text"
+                                        :value="contract.partyB.name"
+                                        v-model="contract.partyB.name"
+                                        style="width: 480px;">
+                            </h3>
+                            <div>
+                                <label style="width: 70px;">公司名称：</label>
+                                <input type="text"
+                                        :value="contract.partyB.companyName"
+                                        v-model="contract.partyB.companyName"
+                                        style="width: 460px;">
+                            </div>
+                            <div>
+                                <label style="width: 85px;">营业执照号：</label>
+                                <input type="text"
+                                        :value="contract.partyB.licenseNo"
+                                        v-model="contract.partyB.licenseNo"
+                                        style="width: 445px;">
+                            </div>
+                            <div>
+                                <label style="width: 70px;">公司地址：</label>
+                                <input type="text"
+                                        :value="contract.partyB.companyAddress"
+                                        v-model="contract.partyB.companyAddress"
+                                        style="width: 460px;">
+                            </div>
+                            <div>
+                                <label style="width: 85px;">法定代表人：</label>
+                                <input type="text"
+                                        :value="contract.partyB.legalPerson"
+                                        v-model="contract.partyB.legalPerson"
+                                        style="width: 110px;">
+                                <label style="width: 70px;margin-left: 10px;">联系电话：</label>
+                                <input type="text"
+                                        :value="contract.partyB.legalPersonPhone"
+                                        v-model="contract.partyB.legalPersonPhone"
+                                        style="width: 247px;">
+                            </div>
+                            <div>
+                                <label style="width: 85px;">委托代表人：</label>
+                                <input type="text"
+                                        :value="contract.partyB.client"
+                                        v-model="contract.partyB.client"
+                                        style="width: 110px;">
+                                <label style="width: 70px;margin-left: 10px;">联系电话：</label>
+                                <input type="text"
+                                        :value="contract.partyB.clientPhone"
+                                        v-model="contract.partyB.clientPhone"
+                                        style="width: 247px;">
+                            </div>
+                        </div>
+                    </template>
+                    <template v-for="(line, idx) in contract.outline">
+                        <h3 v-if="line.subsidiary != 0" :id="line.id">{{ '第' + Number(isContainIntroduction ? idx : idx + 1).toUpperCase() + '条 ' }}{{ line.title }}<button class="icon-delete-term" @click="delOutline(idx)"></button></h3>
+                        <div class="tips" v-if="line.subsidiary != 0"><span>Ctrl+Enter</span> 添加项或子项,<span> Ctrl+Z </span>撤销输入</div>
+                        <cg-editor ref="editors" :key="line.id"
+                            :outline="line"
+                            @keydown.native="toggleSelected(idx, $event)"
+                            @keyup.native="inputDataProcess($event)"
+                            @mousedown.native="toggleSelected(idx, $event)"
+                        >
+                        </cg-editor>
+                    </template>
+                    <div class="signed-wrap clearfix">
+                        <div>
+                            <p>甲方(盖章)：</p>
+                            <p>签订日期：<em>年</em><em>月</em><em>日</em></p>
+                        </div>
+                        <div>
+                            <p>乙方(盖章)：</p>
+                            <p>签订日期：<em>年</em><em>月</em><em>日</em></p>
+                        </div>
+                    </div>
+                </div>
+            </v-scrollbar>
+        </div>
+
+        <div class="editor-body-right">
+            <h3>参考条款<span :title="contract.category.name">{{ contract.category.name }}</span></h3>
+
+            <div class="tabs clearfix">
+                <span :class="{active: activeTab == 1}"
+                    @click="toggleTab(1)">条款信息</span>
+                <span :class="{active: activeTab == 2}"
+                    @click="toggleTab(2)">目录大纲</span>
+            </div>
+
+            <!--条款信息-->
+            <div class="tab-content" v-show="activeTab == 1">
+
+                <div class="current-section">
+                    当前节：{{ currentNode.prefix }}{{ currentNode.title }}
+                </div>
+
+                <v-scrollbar classes="terms"
+                    :speed=100 theme="light"
+                    ref="terms" v-if="!typeing && recommendData.length != 0">
+                    <div class="clearfix">
+                        <ul>
+                            <li :class="getClass(idx)"
+                                v-for="(recommend, idx) in recommendData">
+                                <div v-html="recommend.content"></div>
+                                <div class="btns">
+                                    <button
+                                        @mousedown.stop="deleteRecommend(recommend, idx)">删除
+                                    </button>
+                                    <button :disabled="!selectedParagraph"
+                                        @mousedown.stop="insertParagraph(recommend)">插入
+                                    </button>
+                                    <button :disabled="!selectedParagraph"
+                                        @mousedown.stop="replaceParagraph(recommend)">替换
+                                    </button>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </v-scrollbar>
+
+                <div class="empty" v-show="!typeing && recommendData.length == 0">
+                    <div>
+                        <i class="icon icon-empty"></i>
+                        <p>暂无搜索记录哦~</p>
+                        <p>不要灰心，请输入文字进行推荐搜索...</p>
+                    </div>
+                </div>
+
+                <div class="typeing" v-if="typeing">
+                    <i class="icon icon-typeing"></i>
+                </div>
+
+                <div class="refresh" :class="{loading: loading}"
+                    @click="getRecommendDataByInputText">
+                    <!--<button><i class="icon icon-refresh"></i> 换一批看看</button>-->
+                    <button @click.stop="toggleLock">
+                        <span class="cssarrow">{{ isLocked ? '同步推荐 (已关闭)' : '同步推荐 (已开启)' }}</span>
+                        <i class="icon"
+                            :class="{'icon-lock': !isLocked, 'icon-locked': isLocked}"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!--目录大纲-->
+            <div class="tab-content" v-show="activeTab == 2">
+                <v-scrollbar classes="outline"
+                    :speed=100 theme="light"
+                    ref="outline">
+                    <div class="clearfix">
+                        <ul>
+                            <li v-for="(outline, idx) in outlineList"
+                                :id="outline.id"
+                                :class="{ different: outline.isDifference }"
+                                @click="jumpTo(outline);">
+                                <i>{{ idx + 1 }}</i>{{ outline.prefix === '' ? '' : outline.prefix + ' ' }}{{ outline.title }}
+                                <button @click="addOutline(idx)"></button>
+                            </li>
+                            <!--
+                            <li class="different"><i>1</i>引言 <button>+</button></li>
+                            -->
+                        </ul>
+                    </div>
+                </v-scrollbar>
+            </div>
+        </div>
+    </div>
+
+    <cg-popup-menu ref="popupLeft"
+        :pos="posLeft"
+        :paste-el="pasteEl"
+        :selectedParagraph="selectedParagraph"
+        :showItems='showItems'
+        @copy="copyParagraphText"
+        @paste="pasteParagraphText"
+        @del="delParagraph"
+        @add="addParagraph"
+        @add-sub="addSubParagraph"
+        @upgrade="upgrade"
+        @downgrade="downgrade"></cg-popup-menu>
+
+    <!--<cg-popup-menu ref="popupRight"
+        :menu-type="2"
+        :pos="posRight"
+        :paste-el="pasteEl"
+        :selected-paragraph="selectedParagraph"
+        @insert="insertParagraph"
+        @replace="replaceParagraph"></cg-popup-menu>-->
+
+    <!--公共对话框-->
+    <common-dialog ref="dialog"></common-dialog>
+</div>

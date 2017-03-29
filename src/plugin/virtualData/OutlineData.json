@@ -1,0 +1,212 @@
+[
+  {
+    "id": 49242,
+    "prefix": "",
+    "cateid": 8,
+    "parentid": 0,
+    "subsidiary": 0,
+    "title": "引言",
+    "content": "<ol><li>发包人（全称）：\n法定代表人：\n联系电话：\n通讯地址：\n电子邮箱： \n\n承包人（全称）： \n法定代表人：\n联系电话：\n通讯地址：\n电子邮箱：\n承包人资质等级：\n\n甲乙双方经充分友好协商，本着平等自愿、公平诚信的原则，依照《中华人民共和国合同法》和中华人民共和国建设部、国家工商行政管理总局共同发布的《建设工程施工合同》及其他有关规定，就          工程施工项目经订立本合同，以资共同遵守。?</li></ol>",
+    "sortBy": 0
+  },
+  {
+    "id": 49243,
+    "prefix": "第一条",
+    "cateid": 8,
+    "parentid": 0,
+    "subsidiary": 1,
+    "title": "工程概况\n  该工程名称为        ，立项批准文号为            ，总面积为       平方米，位于      省（市）    市       区（县）         街道        。",
+    "content": "",
+    "sortBy": 1
+  },
+  {
+    "id": 49244,
+    "prefix": "第二条",
+    "cateid": 8,
+    "parentid": 0,
+    "subsidiary": 1,
+    "title": "工程承包范围\n  工程范围和内容：全部工程建筑面积________平方米。(各单项工程详见工程项目一览表)",
+    "content": "",
+    "sortBy": 2
+  },
+  {
+    "id": 49245,
+    "prefix": "第三条",
+    "cateid": 8,
+    "parentid": 0,
+    "subsidiary": 1,
+    "title": "合同工期\n本工程从      年       月       日开工至      年       月       日竣工，共计                   自然日。",
+    "content": "",
+    "sortBy": 3
+  },
+  {
+    "id": 49246,
+    "prefix": "第四条",
+    "cateid": 8,
+    "parentid": 0,
+    "subsidiary": 1,
+    "title": "合同价款与支付 ",
+    "content": "<ol ata-subsidiary='2'><li id='49247' data-subsidiary='2' data-pid='49246'>本合同全部工程造价的结算方式，按_______（预算结算／承包总价结算／平方米造价包干／工程量清单结算）方式办理。 </li><li id='49248' data-subsidiary='2' data-pid='49246'>本合同自签订生效之日起，甲方应在_____日内按工程造价总额元的________%一次拨给乙方备料及施工费。</li><li id='49249' data-subsidiary='2' data-pid='49246'>工程进行期间，甲方应审查乙方提供的完成工作量统计月（季）报表，并据此拨给工程进度款。</li><li id='49250' data-subsidiary='2' data-pid='49246'>工程未竣工验收前，可预留工程总造价的________%的尾款，待工程竣工验收后全部付清。</li><li id='49251' data-subsidiary='2' data-pid='49246'>不按合同规定拨付工程款，按银行有关逾期付款办法或“工程价款结算办法”的有关规定处理。</li></ol>",
+    "sortBy": 4
+  },
+  {
+    "id": 49252,
+    "prefix": "第五条",
+    "cateid": 8,
+    "parentid": 0,
+    "subsidiary": 1,
+    "title": "监理\n    双方约定由             监理单位的监理工程师（姓名：      职务：        职权：      ）负责本工程的监理工作，除本款有明确约定或经发包人同意外，监理工程师无权解除合同约定的承包人的任何权利与义务。",
+    "content": "",
+    "sortBy": 5
+  },
+  {
+    "id": 49253,
+    "prefix": "第六条",
+    "cateid": 8,
+    "parentid": 0,
+    "subsidiary": 1,
+    "title": "双方派驻工地代表",
+    "content": "<ol ata-subsidiary='2'><li id='49254' data-subsidiary='2' data-pid='49253'>发包人派驻工地代表姓名：          职权：</li><li id='49255' data-subsidiary='2' data-pid='49253'>承包人派驻工地代表姓名：          职权：</li><li id='49256' data-subsidiary='2' data-pid='49253'>任何一方驻工地代表发生变更时，应提前3日书面通知对方，并明确指出交接时间、权限。</li></ol>",
+    "sortBy": 6
+  },
+  {
+    "id": 49257,
+    "prefix": "第七条",
+    "cateid": 8,
+    "parentid": 0,
+    "subsidiary": 1,
+    "title": "发包人责任",
+    "content": "<ol ata-subsidiary='2'><li id='49258' data-subsidiary='2' data-pid='49257'>发包人保证现场在施工7日前达到具备施工条件。</li><li id='49259' data-subsidiary='2' data-pid='49257'>发包人将施工所需的水、电、电讯等管网线路在施工7日前接至施工场。</li><li id='49260' data-subsidiary='2' data-pid='49257'>发包人在施工7日前开通施工场地与公共道路；</li><li id='49261' data-subsidiary='2' data-pid='49257'>发包人在施工7日前提供工程地质和地下管网线路资料。</li><li id='49262' data-subsidiary='2' data-pid='49257'>由发包人办理的施工所需证件、批件；</li><li id='49263' data-subsidiary='2' data-pid='49257'>发包人负责在施工7日前交验水准点和坐标控制点；</li><li id='49264' data-subsidiary='2' data-pid='49257'>发包人组织图纸会审和设计交底；</li><li id='49265' data-subsidiary='2' data-pid='49257'>发包人在施工7日前提供图纸          套；</li><li id='49266' data-subsidiary='2' data-pid='49257'>发包人协调处理施工场地周围地下管线和邻近建筑物、构筑物（含文物建筑）、古树名木的保护工作。</li><li id='49267' data-subsidiary='2' data-pid='49257'>发包人应对其在施工场地的工作人员进行安全教育，并对他们的安全负责。发包人不得要求承包人违反安全管理的规定进行施工。因发包人原因导致的安全事故，由发包人承担相应责任及发生的费用。</li><li id='49268' data-subsidiary='2' data-pid='49257'>双方约定发包人应做的其他工作：</li></ol>",
+    "sortBy": 7
+  },
+  {
+    "id": 49269,
+    "prefix": "第八条",
+    "cateid": 8,
+    "parentid": 0,
+    "subsidiary": 1,
+    "title": "承包人责任",
+    "content": "<ol ata-subsidiary='2'><li id='49270' data-subsidiary='2' data-pid='49269'>承包人应在    年    月    日之前提供施工计划、报表；</li><li id='49271' data-subsidiary='2' data-pid='49269'>承包人负责施工安全保卫工作和非夜间施工照明；</li><li id='49272' data-subsidiary='2' data-pid='49269'>承包人向发包人提供办公和生活房屋及设施，发包人承担由此产生的费用。</li><li id='49273' data-subsidiary='2' data-pid='49269'>承包人办理的有关施工场地交通环卫和施工噪音管理等手续，发包人承担由此发生的费用。</li><li id='49274' data-subsidiary='2' data-pid='49269'>承包人负责已竣工但未交付发包人之前的工程保护工作，由        承担此项费用。</li><li id='49275' data-subsidiary='2' data-pid='49269'>承包人做好施工场地周围地下管线和邻近建筑物、构筑物（含文物保护建筑）、古树名木的保护工作，由        承担此项费用。</li><li id='49276' data-subsidiary='2' data-pid='49269'>承包人保障施工场地清洁符合环境卫生管理的有关规定。</li><li id='49277' data-subsidiary='2' data-pid='49269'>承包人未经发包人同意，不得将本工程图纸转让给第三人。</li><li id='49278' data-subsidiary='2' data-pid='49269'>承包人应遵守工程建设安全生产有关管理规定，严格按安全标准组织施工，并随时接受行业安全检查人员依法实施的监督检查，采取必要的安全防护措施，消除事故隐患。由于承包人安全措施不力造成事故的责任和因此发生的费用，由承包人承担。</li><li id='49279' data-subsidiary='2' data-pid='49269'>发生重大伤亡及其他安全事故，承包人应按有关规定立即上报有关部门并通知发包人，同时按政府有关部门要求处理，由事故责任方承担发生的费用。</li><li id='49280' data-subsidiary='2' data-pid='49269'>双方约定的承包人应做的其他工作：</li></ol>",
+    "sortBy": 8
+  },
+  {
+    "id": 49281,
+    "prefix": "第九条",
+    "cateid": 8,
+    "parentid": 0,
+    "subsidiary": 1,
+    "title": "进度计划",
+    "content": "<ol ata-subsidiary='2'><li id='49282' data-subsidiary='2' data-pid='49281'>承包人在    年     月      日之前提供施工组织设计（施工方案）和进度计划；</li><li id='49283' data-subsidiary='2' data-pid='49281'>发包人对施工方案、进度计划予以书面确认或在收到方案、进度计划    日内提出修改意见的时间，发包人逾期未确认也未提出修改意见的，视为同意。</li><li id='49284' data-subsidiary='2' data-pid='49281'>承包人必须按照经确认的进度计划组织施工，并接受监督和检查。因承包人原因导致实际进度与进度计划不符的，承包人无权就改进措施提出追加合同价款。</li></ol>",
+    "sortBy": 9
+  },
+  {
+    "id": 49285,
+    "prefix": "第十条",
+    "cateid": 8,
+    "parentid": 0,
+    "subsidiary": 1,
+    "title": "开工延期、暂停施工、工期延误以及工期提前",
+    "content": "<ol ata-subsidiary='2'><li id='49286' data-subsidiary='2' data-pid='49285'>延期开工 　　因发包人原因造成延期开工的，由发包人承担由此给承包人造成的损失，并顺延工期；承包人不能按时开工的，应提前        日书面通知发包人并征得发包人同意，发包人不同意延期的或承包人未在规定期限内发出延期通知的，工期不顺延。</li><li id='49287' data-subsidiary='2' data-pid='49285'>暂停施工如发生： 　　因发包人原因停工的，由发包人承担所发生的追加合同价款，赔偿承包人由此受到的损失，相应顺延工期；因承包人原因停工的，由承包人承担发生的费用，工期不顺延。</li><li id='49288' data-subsidiary='2' data-pid='49285'>工期延误　　由于以下原因造成竣工日期推迟的延误，经发包人确认，工期相应顺延。</li><ol data-subsidiary='3'><li id='49289' data-subsidiary='3' data-pid='49288'>承包人未能按约定日期提供图纸及开工条件；</li><li id='49290' data-subsidiary='3' data-pid='49288'>发包人未能按约定日期支付工程预付款、进度款，使施工不能正常进行；</li><li id='49291' data-subsidiary='3' data-pid='49288'>发包人未按合同约定提供所需指令、批准等，致使施工不能正常进行；</li><li id='49292' data-subsidiary='3' data-pid='49288'>因工程量变化或重大设计变更影响工期；</li><li id='49293' data-subsidiary='3' data-pid='49288'>非承包人原因停水、停电等原因造成停工；</li><li id='49294' data-subsidiary='3' data-pid='49288'>不可抗力及自然灾害；</li><li id='49295' data-subsidiary='3' data-pid='49288'>发包人同意工期相应顺延的其他情况；</li><li id='49296' data-subsidiary='3' data-pid='49288'>其他可调整工期的因素：     承包人在以上情况发生后    日内，就延误的内容和因此发生的经济支出向发包人、监理方提出报告。发包人在收到报告后 　日内予以确认答复，逾期不予答复，承包人即可视为延期要求已被确认。</li></ol><li id='49297' data-subsidiary='2' data-pid='49285'>工期提前　　工期如需提前，双方协议如下：     发包人要求在    年    月    日提前竣工，则发包人应当提供                      的条件，承包人采取                  赶工措施，因赶工而增加的经济支出和费用由      承担。</li></ol>",
+    "sortBy": 10
+  },
+  {
+    "id": 49298,
+    "prefix": "第十一条",
+    "cateid": 8,
+    "parentid": 0,
+    "subsidiary": 1,
+    "title": "质量与检验",
+    "content": "<ol ata-subsidiary='2'><li id='49299' data-subsidiary='2' data-pid='49298'>工程质量    工程质量依据                     的标准，双方对工程质量有争议时，由质量监督站鉴定，所需费用及由此造成的损失由责任方承担。</li><li id='49300' data-subsidiary='2' data-pid='49298'>隐蔽工程的中间验收    双方约定的中间验收的部位包括                             ，当工程具备覆盖、掩盖条件或达到中间验收部位以前，承包人自检，并于         小时前书面通知发包人、监理方检验。验收合格，发包人、监理方在验收记录上签字后，方可进行隐蔽和继续施工。若在         小时内发包人、监理方不进行验收也未提出书面延期要求的，承包人可自行组织验收，发包人、监理方应承认验收记录。验收不合格，承包人在限定时间内修改后重新验收，所需费用由承包人承担，不能影响工期。除此之外影响正常施工的经济支出由发包人承担，相应顺延工期。</li></ol>",
+    "sortBy": 11
+  },
+  {
+    "id": 49301,
+    "prefix": "第十二条",
+    "cateid": 8,
+    "parentid": 0,
+    "subsidiary": 1,
+    "title": "物资供应",
+    "content": "<ol ata-subsidiary='2'><li id='49302' data-subsidiary='2' data-pid='49301'>全部工程所需的物资按下列第( )项供应方式办理：</li><ol data-subsidiary='3'><li id='49303' data-subsidiary='3' data-pid='49302'>特殊材料、统配部管材料及统配部管机电产品，均由甲方负责采购，供应至乙方指定地点。其他材料由乙方负责采购供应。</li><li id='49304' data-subsidiary='3' data-pid='49302'>统配、部管材料，由乙方负责办理申请、订货、调剂合用，特殊材料及统配、部管的机电产品，由甲方负责采购供应至乙方指定地点，其他材料均由乙方负责采购供应。</li><li id='49305' data-subsidiary='3' data-pid='49302'>包工不包料工程，全部材料、设备由甲方采购供应到现场或指定的加工地点。</li><li id='49306' data-subsidiary='3' data-pid='49302'>其他方式：</li></ol><li id='49307' data-subsidiary='2' data-pid='49301'>由甲方负责供应材料和设备的品种、规格、数量及进场期限，详见甲方供应材料、设备一览表。</li><li id='49308' data-subsidiary='2' data-pid='49301'>成套设备和非标准设备，由甲方负责办理申请、订货及加工，引进成套设备在交付乙方前，由甲方负责检验(甲方委托乙方总包承办设备订货及非标准设备加工，应另签订协议)。</li><li id='49309' data-subsidiary='2' data-pid='49301'>工程所需材料，如因供应部门规格、品种或材质不能满足工程要求必须以其他规格、品种代替或加工处理时，应事先取得原设计单位和甲方同意，并由三方签订协议后实行。由于代用或加工而发生的量差、价差及加工费，应按现行规定办理结算。</li><li id='49310' data-subsidiary='2' data-pid='49301'>凡应附有合格证明的材料，在进场时必须由供应方负责验证;如无合格证明，必须经供应方试验合格后方准使用，其试验费用，应由供应方负担。因建设单位或设计单位对有出厂合格证明的材料要求重新试验，其试验费用，应由甲方负担。</li><li id='49311' data-subsidiary='2' data-pid='49301'>由甲方负责供应的材料和设备，如未按期供应或规格、质量不符要求，经双方努力仍无法解决，因此造成乙方的损失，应由甲方负担。</li></ol>",
+    "sortBy": 12
+  },
+  {
+    "id": 49312,
+    "prefix": "第十三条",
+    "cateid": 8,
+    "parentid": 0,
+    "subsidiary": 1,
+    "title": "工程变更",
+    "content": "<ol ata-subsidiary='2'><li id='49313' data-subsidiary='2' data-pid='49312'>设计变更　　施工中发包人对原设计变更，发包人向承包人发出书面变更通知，承包人按照通知进行变更。如果承包人对原设计提出变更要求，经发包人、监理方批准后方可实施，并签署书面变更协议。</li><li id='49314' data-subsidiary='2' data-pid='49312'>其他变更　　施工中如发生除设计变更以外的其他变更时，采用协议形式双方加以确认。</li><li id='49315' data-subsidiary='2' data-pid='49312'>确定变更价款</li><ol data-subsidiary='3'><li id='49316' data-subsidiary='3' data-pid='49315'>承包人应在收到变更通知或签署变更协议后 　　　　日内提出变更工程量及价款报告资料。</li><li id='49317' data-subsidiary='3' data-pid='49315'>发包人在收到变更资料报告     日内予以确认，逾期无正当理由不确认时，视为变更报告已批准。</li></ol></ol>",
+    "sortBy": 13
+  },
+  {
+    "id": 49318,
+    "prefix": "第十四条",
+    "cateid": 8,
+    "parentid": 0,
+    "subsidiary": 1,
+    "title": "竣工验收与结算",
+    "content": "<ol ata-subsidiary='2'><li id='49319' data-subsidiary='2' data-pid='49318'>竣工验收</li><ol data-subsidiary='3'><li id='49320' data-subsidiary='3' data-pid='49319'>工程具备竣工验收条件，承包人以书面形式通知发包人，并向发包人提供完整的竣工资料和竣工验收报告。发包人在收到以上文件后 　　　　日内组织验收。发包人如无正当理由不组织验收或验收后         日内未提出修改意见，视为竣工验收报告已被认可。</li><li id='49321' data-subsidiary='3' data-pid='49319'>竣工日期为本工程竣工验收通过的日期。保修期正式开始。</li><li id='49322' data-subsidiary='3' data-pid='49319'>因特殊原因，部分单位工程和部位需甩项竣工时，双方订立甩项竣工协议，并明确双方责任。</li></ol><li id='49323' data-subsidiary='2' data-pid='49318'>竣工结算</li><ol data-subsidiary='3'><li id='49324' data-subsidiary='3' data-pid='49323'>双方办理工程验收手续后，双方进行工程结算。</li><li id='49325' data-subsidiary='3' data-pid='49323'>承包人在竣工验收            日内向发包人提交结算报告及完整的结算资料、竣工图。</li><li id='49326' data-subsidiary='3' data-pid='49323'>发包人自签收结算资料报告之日起             日内提出审核意见并予以签认。</li><li id='49327' data-subsidiary='3' data-pid='49323'>承包人收到竣工结算款后       日内将竣工工程交付发包人。</li></ol></ol>",
+    "sortBy": 14
+  },
+  {
+    "id": 49328,
+    "prefix": "第十五条",
+    "cateid": 8,
+    "parentid": 0,
+    "subsidiary": 1,
+    "title": "质量保修",
+    "content": "<ol ata-subsidiary='2'><li id='49329' data-subsidiary='2' data-pid='49328'>本工程保修期限为??年，自工程竣工验收合格起算。?</li><li id='49330' data-subsidiary='2' data-pid='49328'>在免费保修期内，乙方应保证通讯畅通，令甲方能够随时同乙方取得联系。乙方在接到甲方维修通知后       小时内到达现场并及时处理。如乙方更换保修人员或联系电话，应及时通知甲方。若因乙方通讯不畅或故意不接，拖延推诿，甲方将视为乙方放弃保修责任，有权自行解决，由乙方承担所有费用并加收10%的劳务费</li></ol>",
+    "sortBy": 15
+  },
+  {
+    "id": 49331,
+    "prefix": "第十六条",
+    "cateid": 8,
+    "parentid": 0,
+    "subsidiary": 1,
+    "title": "不可抗力\n    因不可抗力导致的费用及延误的工期由双方按以下方法分别承担：",
+    "content": "<ol ata-subsidiary='2'><li id='49332' data-subsidiary='2' data-pid='49331'>工程本身的损害、因工程损害导致第三人人员伤亡和财产损失以及运至施工场地用于施工的材料和待安装的设备的损害，由发包人承担；</li><li id='49333' data-subsidiary='2' data-pid='49331'>发包人、承包人人员伤亡由其所在单位负责，并承担相应费用；</li><li id='49334' data-subsidiary='2' data-pid='49331'>承包人机械设备损坏及停工损失，由承包人承担；</li><li id='49335' data-subsidiary='2' data-pid='49331'>停工期间，承包人应监理工程师要求留在施工场地的必要的管理人员及保卫人员的费用由发包人承担；</li><li id='49336' data-subsidiary='2' data-pid='49331'>工程所需清理、修复费用，由发包人承担；</li><li id='49337' data-subsidiary='2' data-pid='49331'>延误的工期相应顺延。    因合同一方迟延履行合同后发生不可抗力的，不能免除迟延履行方的相应责任。</li></ol>",
+    "sortBy": 16
+  },
+  {
+    "id": 49338,
+    "prefix": "第十七条",
+    "cateid": 8,
+    "parentid": 0,
+    "subsidiary": 1,
+    "title": "违约与争议解决",
+    "content": "<ol ata-subsidiary='2'><li id='49339' data-subsidiary='2' data-pid='49338'>违约责任</li><ol data-subsidiary='3'><li id='49340' data-subsidiary='3' data-pid='49339'>任何一方违反本合同的约定，均应承担由此给对方造成的损失。</li><li id='49341' data-subsidiary='3' data-pid='49339'>因承包人原因延期竣工的，应交付的违约金额和计算方法：</li><li id='49342' data-subsidiary='3' data-pid='49339'>因承包人原因致使工程达不到质量要求的，应承担的违约责任：</li><li id='49343' data-subsidiary='3' data-pid='49339'>发包人不按时支付工程款的违约责任：</li></ol><li id='49344' data-subsidiary='2' data-pid='49338'>争议解决方式    本合同在履行过程中发生的争议由双方当事人协商解决，协商不成的，按下列第         种方式解决：</li><ol data-subsidiary='3'><li id='49345' data-subsidiary='3' data-pid='49344'>依法向         人民法院起诉；</li><li id='49346' data-subsidiary='3' data-pid='49344'>提交         仲裁委员会仲裁。</li><li id='49347' data-subsidiary='3' data-pid='49344'>其他：</li></ol></ol>",
+    "sortBy": 17
+  },
+  {
+    "id": 49348,
+    "prefix": "第十八条",
+    "cateid": 8,
+    "parentid": 0,
+    "subsidiary": 1,
+    "title": "合同解除",
+    "content": "<ol ata-subsidiary='2'><li id='49349' data-subsidiary='2' data-pid='49348'>双方协商一致，可以解除合同。</li><li id='49350' data-subsidiary='2' data-pid='49348'>发包人不按合同约定支付工程款，双方又未达成延期付款协议，承包人可停止施工，停止施工超过              日，发包人仍不支付工程款（进度款），承包人有权解除合同。</li><li id='49351' data-subsidiary='2' data-pid='49348'>承包人将其承包的全部工程转包给他人或者肢解以后以分包的名义分别转包给他人，发包人有权解除合同。</li><li id='49352' data-subsidiary='2' data-pid='49348'>有下列情形之一的，发包人、承包人可以解除合同：</li><ol data-subsidiary='3'><li id='49353' data-subsidiary='3' data-pid='49352'>因不可抗力致使合同无法履行；</li><li id='49354' data-subsidiary='3' data-pid='49352'>因一方违约（包括因发包人原因造成工程停建或缓建）致使合同无法履行。</li></ol><li id='49355' data-subsidiary='2' data-pid='49348'>合同按司法程序解除后，承包人应妥善做好已完工程和已购材料、设备的保护和移交工作，按发包人要求将自有机械设备和人员撤出施工场地。发包人应为承包人撤出提供必要条件，支付以上所发生的费用，并按合同约定支付已完工程价款。已经订货的材料、设备由订货方负责退货或解除订货合同，不能退还的货款和因退货、解除订货合同发生的费用，由发包人承担，因未及时退货造成的损失由责任方承担。除此之外，有过错的一方应当赔偿因合同解除给对方造成的损失。</li><li id='49356' data-subsidiary='2' data-pid='49348'>合同解除后，不影响双方在合同中约定的结算和清理条款的效力。</li></ol>",
+    "sortBy": 18
+  },
+  {
+    "id": 49357,
+    "prefix": "第十九条",
+    "cateid": 8,
+    "parentid": 0,
+    "subsidiary": 1,
+    "title": "合同生效及终止",
+    "content": "<ol ata-subsidiary='2'><li id='49358' data-subsidiary='2' data-pid='49357'>本合同自              之日起生效。</li><li id='49359' data-subsidiary='2' data-pid='49357'>本合同在双方完成了相互约定的工作内容后即告终止。</li></ol>",
+    "sortBy": 19
+  },
+  {
+    "id": 49360,
+    "prefix": "第二十条",
+    "cateid": 8,
+    "parentid": 0,
+    "subsidiary": 1,
+    "title": "其他\n    本合同正本二份具有同等效力，双方各持一份。本合同副本份数         份，由双方分别收持。\n    双方根据有关法律、行政法规规定，结合本工程实际，经协商一致后，可对本合同具体化、补充或修改。\n（以下无正文，仅为签署部分）\n\n\n发包人：（公章）                       承包人：（公章）\n发包人代表人：                         承包人代表人：\n日期：                                 日期：",
+    "content": "",
+    "sortBy": 20
+  }
+]

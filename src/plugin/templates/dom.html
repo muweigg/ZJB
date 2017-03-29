@@ -1,0 +1,26 @@
+<div class="top-bar"></div>
+<!--创建器-->
+<generator ref="generator" :settings="settings"
+    @sync-contract="syncContract"
+    @start-edit="startEditorMode"></generator>
+<!--编辑器-->
+<editor ref="editor" :settings="settings"
+    @generator-mode="generatorMode"
+    @preview="previewContract"></editor>
+<!--预览-->
+<preview ref="preview" :settings="settings"
+    @editor-mode="editorMode"></preview>
+<!--公共对话框-->
+<common-dialog ref="dialog"></common-dialog>
+
+<!--测试代码-->
+<!--
+<button style="position: relative;z-index: 1;"
+    @click.stop="showDialog">Show dialog</button>
+<button style="position: relative;z-index: 1;"
+    @click.stop="toggleDisplayGenerator">toggle generator</button>
+<button style="position: relative;z-index: 1;"
+    @click.stop="toggleDisplayEditor">toggle editor</button>
+<button style="position: relative;z-index: 1;"
+    @click.stop="toggleDisplayPreview">toggle preview</button>
+-->

@@ -1,0 +1,51 @@
+@import './scss/common.scss';
+@import './scss/icons.scss';
+
+[v-cloak] {
+    display: none;
+}
+
+[tml-cg] {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: $bgColor url($basePath + 'assets/bg.jpg') center center/cover no-repeat;
+    min-width: $minWidth;
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Microsoft YaHei";
+    }
+
+    img {
+        border: 0;
+    }
+
+    a, button {
+        outline: none;
+    }
+
+    .clearfix {
+
+        &:after {
+            content: ' ';
+            width: 0;
+            height: 0;
+            display: block;
+            clear: both;
+        }
+    }
+
+    .top-bar {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 6px;
+        background: transparent url($basePath + 'assets/top-bar.png') center center/cover no-repeat;
+    }
+}

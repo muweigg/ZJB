@@ -1,0 +1,167 @@
+<div class="generator-wrap" v-show="isDisplay">
+
+    <div class="generator-logo"></div>
+
+    <div class="generator-body"
+        :class="{ 'make-guide-mode': isMakeGuide }">
+
+        <div class="bg-text"></div>
+
+        <div class="btns">
+            <button class="new"
+                @click="createContract">
+                <i class="icon icon-new"></i>新建合同
+            </button>
+
+            <button class="import"
+                @click="loadContract">
+                <i class="icon icon-import"></i>导入合同
+            </button>
+        </div>
+    </div>
+    
+    <transition :name="transitionName">
+        <div class="step"
+            v-show="isMakeGuide && guideStep == 1">
+            <div class="step-content">
+                <h3><i class="icon icon-step"></i>合同领域、类别</h3>
+                <h4><i class="icon icon-field"></i>领域</h4>
+                
+                <cg-slide
+                    ref="field"
+                    name="field"
+                    line="1"
+                    :items="fieldData"
+                    @selected="selectedField"></cg-slide>
+
+                <h4><i class="icon icon-category"></i>类别</h4>
+                
+                <cg-slide
+                    ref="category"
+                    name="category"
+                    line="2"
+                    :items="categoryData"
+                    @selected="selectedCategory"></cg-slide>
+
+                <div class="btns step1">
+                    <button class="btn prev"
+                        @click="back">返回</button>
+                    <button class="btn next"
+                        @click="nextStep">下一步</button>
+                </div>
+                
+            </div>
+        </div>
+    </transition>
+    <transition :name="transitionName">
+        <div class="step"
+            v-show="isMakeGuide && guideStep == 2">
+            <div class="step-content">
+                <h3><i class="icon icon-step"></i>合同大纲结构</h3>
+                <label class="all-select">
+                    <input type="checkbox" v-model="allSelected"
+                        @click="allSelect">全选
+                </label>
+                <v-scrollbar classes="contract-outline"
+                    :speed=100 theme="light"
+                    ref="coScrollbar">
+                    <div class="clearfix">
+                        <label v-for="(outline, i) in outlineData" :title="outline.title">
+                            <input type="checkbox" :value="outline.id"
+                            v-model="selectedOutlineIds">
+                            {{ outline.title }}
+                        </label>
+                    </div>
+                </v-scrollbar>
+
+                <div class="btns step2">
+                    <button class="btn prev"
+                        @click="prevStep">上一步</button>
+                    <button class="btn next"
+                        @click="nextStep">下一步</button>
+                </div>
+            </div>
+        </div>
+    </transition>
+    <transition :name="transitionName">
+        <div class="step small"
+            v-show="isMakeGuide && guideStep == 3">
+            <div class="step-content">
+                <h3><i class="icon icon-step"></i>确认合同信息</h3>
+                <div class="contract-info">
+                    <div class="center-align">
+                        <label><input type="radio" name="contractType" value="0" v-model="contract.type">普通</label>
+                        <label><input type="radio" name="contractType" value="1" v-model="contract.type">个人</label>
+                        <label><input type="radio" name="contractType" value="2" v-model="contract.type">公司</label>
+                    </div>
+                    <div>
+                        <label for="contractName">
+                            <i class="icon icon-name"></i>名称
+                        </label>
+                        <input type="text" id="contractName" ref="contractName" value="contract.name"
+                            v-model="contract.name" @keyup.enter="startEdit">
+                        <i class="icon icon-editable"></i>
+                    </div>
+                    <div>
+                        <label for="contractField">
+                            <i class="icon icon-field"></i>领域
+                        </label>
+                        <input type="text" id="contractField" readonly :value="contract.field.name">
+                    </div>
+                    <div>
+                        <label for="contractCategory">
+                            <i class="icon icon-category"></i>类别
+                        </label>
+                        <input type="text" id="contractCategory" readonly :value="contract.category.name">
+                    </div>
+                </div>
+
+                <v-scrollbar classes="outline-list"
+                    :speed=100 theme="light"
+                    ref="olScrollbar">
+                    <div class="clearfix">
+                        <span v-for="(outline, idx) in contract.outline"><i>{{ idx + 1 }}</i>{{ outline.title }}</span>
+                    </div>
+                </v-scrollbar>
+
+                <div class="empty-contract">
+                    <label>
+                        <input type="checkbox" v-model="contract.isEmpty">
+                        空白合同<em>(无款项内容)</em>
+                    </label>
+                </div>
+
+                <div class="btns step3">
+                    <button class="btn prev"
+                        @click="prevStep">上一步</button>
+                    <button class="btn start"
+                        @click="startEdit">开始制作</button>
+                </div>
+            </div>
+        </div>
+    </transition>
+
+    <div class="generator-steps" v-show="isMakeGuide">
+        <div class="steps-wrap">
+            <ul class="clearfix">
+                <li :class="{ active: guideStep == 1 }">
+                    <span class="step-number">1</span>
+                    <span class="setp-text">选择合同领域、类别</span>
+                </li>
+
+                <li :class="{ active: guideStep == 2 }">
+                    <span class="step-number">2</span>
+                    <span class="setp-text">选择合同大纲结构</span>
+                </li>
+
+                <li :class="{ active: guideStep == 3 }">
+                    <span class="step-number">3</span>
+                    <span class="setp-text">确认信息制作合同</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+    
+    <!--公共对话框-->
+    <common-dialog ref="dialog"></common-dialog>
+</div>

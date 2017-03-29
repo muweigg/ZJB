@@ -1,0 +1,154 @@
+<div class="preview-wrap" v-show="isDisplay">
+    <div class="top-toolbar-wrap">
+        <div class="top-toolbar">
+            <div class="logo icon-logo"></div>
+            <ul class="right-tools clearfix">
+                <li><button class="save"
+                        @click="saveContract">保存</button></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="preview-body-wrap">
+        <div class="close icon-dialog-close" @click="editorMode"></div>
+        <v-scrollbar classes="contract-body"
+            :speed=100 theme="light"
+            ref="contractBody">
+            <div class="clearfix">
+                <h1 class="contract-title">{{ contract.name }}</h1>
+                
+                <template v-if="contract.type == 0">
+                    <div class="contract-header">
+                        <h3>
+                            <label style="width: 50px;">甲方：</label>
+                            {{ contract.partyA.name }}
+                        </h3>
+                        <h3 style="margin-top: 10px;">
+                            <label style="width: 50px;">乙方：</label>
+                            {{ contract.partyB.name }}
+                        </h3>
+                    </div>
+                </template>
+                <template v-else-if="contract.type == 1">
+                    <div class="contract-header">
+                        <h3>
+                            <label style="width: 50px;">甲方：</label>
+                            {{ contract.partyA.name }}
+                        </h3>
+                        <div>
+                            <label style="width: 85px;">委托处理人：</label>
+                            <span style="width: 110px;">{{ contract.partyA.client }}</span>
+                            <label style="width: 70px;margin-left: 10px;">联系电话：</label>
+                            {{ contract.partyA.clientPhone }}
+                        </div>
+                        <div>
+                            <label style="width: 70px;">公司名称：</label>
+                            {{ contract.partyA.companyName }}
+                        </div>
+                        <div>
+                            <label style="width: 70px;">家庭地址：</label>
+                            {{ contract.partyA.homeAddress }}
+                        </div>
+
+                        <h3 style="margin-top: 10px;">
+                            <label style="width: 50px;">乙方：</label>
+                            {{ contract.partyB.name }}
+                        </h3>
+                        <div>
+                            <label style="width: 85px;">委托处理人：</label>
+                            <span style="width: 110px;">{{ contract.partyB.client }}</span>
+                            <label style="width: 70px;margin-left: 10px;">联系电话：</label>
+                            {{ contract.partyB.clientPhone }}
+                        </div>
+                        <div>
+                            <label style="width: 70px;">公司名称：</label>
+                            {{ contract.partyB.companyName }}
+                        </div>
+                        <div>
+                            <label style="width: 70px;">家庭地址：</label>
+                            {{ contract.partyB.homeAddress }}
+                        </div>
+                    </div>
+                </template>
+                <template v-else>
+                    <div class="contract-header">
+                        <h3>
+                            <label style="width: 50px;">甲方：</label>
+                            {{ contract.partyA.name }}
+                        </h3>
+                        <div>
+                            <label style="width: 70px;">公司名称：</label>
+                            {{ contract.partyA.companyName }}
+                        </div>
+                        <div>
+                            <label style="width: 85px;">营业执照号：</label>
+                            {{ contract.partyA.licenseNo }}
+                        </div>
+                        <div>
+                            <label style="width: 70px;">公司地址：</label>
+                            {{ contract.partyA.companyAddress }}
+                        </div>
+                        <div>
+                            <label style="width: 85px;">法定代表人：</label>
+                            <span style="width: 110px;">{{ contract.partyA.legalPerson }}</span>
+                            <label style="width: 70px;margin-left: 10px;">联系电话：</label>
+                            {{ contract.partyA.legalPersonPhone }}
+                        </div>
+                        <div>
+                            <label style="width: 85px;">委托代表人：</label>
+                            <span style="width: 110px;">{{ contract.partyA.client }}</span>
+                            <label style="width: 70px;margin-left: 10px;">联系电话：</label>
+                            {{ contract.partyA.clientPhone }}
+                        </div>
+
+                        <h3 style="margin-top: 10px;">
+                            <label style="width: 50px;">乙方：</label>
+                            {{ contract.partyB.name }}
+                        </h3>
+                        <div>
+                            <label style="width: 70px;">公司名称：</label>
+                            {{ contract.partyB.companyName }}
+                        </div>
+                        <div>
+                            <label style="width: 85px;">营业执照号：</label>
+                            {{ contract.partyB.licenseNo }}
+                        </div>
+                        <div>
+                            <label style="width: 70px;">公司地址：</label>
+                            {{ contract.partyB.companyAddress }}
+                        </div>
+                        <div>
+                            <label style="width: 85px;">法定代表人：</label>
+                            <span style="width: 110px;">{{ contract.partyB.legalPerson }}</span>
+                            <label style="width: 70px;margin-left: 10px;">联系电话：</label>
+                            {{ contract.partyB.legalPersonPhone }}
+                        </div>
+                        <div>
+                            <label style="width: 85px;">委托代表人：</label>
+                            <span style="width: 110px;">{{ contract.partyB.client }}</span>
+                            <label style="width: 70px;margin-left: 10px;">联系电话：</label>
+                            {{ contract.partyB.clientPhone }}
+                        </div>
+                    </div>
+                </template>
+                <template v-for="(line, idx) in contract.outline">
+                    <h3 v-if="line.subsidiary != 0">{{ '第' + Number(idx).toUpperCase() + '条' }}{{ line.title }}</h3>
+                    <div class="article" v-html="line.content"
+                        :class="{duction: line.subsidiary == 0}"
+                        :style="'padding-top:' + (line.subsidiary == 0 ? '10px' : 0)"></div>
+                </template>
+                <div class="signed-wrap clearfix">
+                    <div>
+                        <p>甲方(盖章)：</p>
+                        <p>签订日期：<em>年</em><em>月</em><em>日</em></p>
+                    </div>
+                    <div>
+                        <p>乙方(盖章)：</p>
+                        <p>签订日期：<em>年</em><em>月</em><em>日</em></p>
+                    </div>
+                </div>
+            </div>
+        </v-scrollbar>
+    </div>
+
+</div>

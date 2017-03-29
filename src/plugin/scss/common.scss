@@ -1,0 +1,190 @@
+@import './icons.scss';
+
+// 图片引用基础路径
+$basePath: './';
+$bgColor: #000;
+
+// 插件最小宽度
+$minWidth: 1200px;
+
+// 图标
+.icon {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.icon-name {
+    @include sprite($name);
+}
+
+.icon-field {
+    @include sprite($field);
+}
+
+.icon-category {
+    @include sprite($category);
+}
+
+.icon-editable {
+    @include sprite($editable);
+}
+
+/*.icon-typeing {
+    @include sprite($typeing);
+}*/
+
+.icon-empty {
+    @include sprite($empty);
+}
+
+.icon-new {
+    @include sprite($new);
+}
+
+.icon-import {
+    @include sprite($import);
+}
+
+.icon-step {
+    @include sprite($step);
+    height: 26px;
+}
+
+.icon-logo {
+    @include sprite($logo);
+}
+
+.icon-undo {
+    @include sprite($undo);
+}
+
+.icon-redo {
+    @include sprite($redo);
+}
+
+.icon-delete-term {
+    @include sprite($delete-term);
+}
+
+.icon-import-e {
+    @include sprite($import-e);
+}
+
+.icon-export-e {
+    @include sprite($export-e);
+}
+
+.icon-dialog-close {
+    @include sprite($dialog-close);
+}
+
+.icon-refresh {
+    @include sprite($refresh);
+}
+
+.icon-copy {
+    @include sprite($copy);
+}
+
+.icon-paste {
+    @include sprite($paste);
+}
+
+.icon-delete {
+    @include sprite($delete);
+}
+
+.icon-add-paragraph {
+    margin-left: -1px;
+    @include sprite($add-paragraph);
+}
+
+.icon-add-subparagraph {
+    margin-left: -1px;
+    @include sprite($add-subparagraph);
+}
+
+.icon-upgrade {
+    @include sprite($upgrade);
+}
+
+.icon-downgrade {
+    @include sprite($downgrade);
+}
+
+.icon-lock {
+    @include sprite($lock);
+}
+
+.icon-locked {
+    @include sprite($locked);
+}
+
+@mixin animation-keyframes {
+    $animation-name: unique-id();
+    animation-name: $animation-name;
+
+    @keyframes #{$animation-name} {
+        @content;
+    }
+}
+
+@function str-replace($string, $search, $replace: '') {
+    $index: str-index($string, $search);
+
+    @if $index {
+        @return str-slice($string, 1, $index - 1) + $replace + str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
+    }
+  
+    @return $string;
+}
+
+.cssarrow {
+	position: relative;
+	background: #404040;
+	border: 0 solid #b9b9b9;
+    border-radius: 3px;
+}
+.cssarrow:after,
+.cssarrow:before {
+	top: 100%;
+	left: 50%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+}
+.cssarrow:after {
+	border-color: rgba(136, 183, 213, 0);
+	border-top-color: #404040;
+	border-width: 5px;
+	margin-left: -5px;
+}
+
+.fade-in-left-enter-active, .fade-in-left-leave-active {
+    transition: all .3s ease;
+}
+.fade-in-left-enter, .fade-in-left-leave-active {
+    opacity: 0;
+}
+.fade-in-left-enter {
+    margin-left: -30px;
+}
+.fade-in-left-leave-active {
+    margin-left: 30px;
+}
+
+.fade-in-right-enter-active, .fade-in-right-leave-active {
+    transition: all .3s ease;
+}
+.fade-in-right-enter, .fade-in-right-leave-active {
+    opacity: 0;
+}
+.fade-in-right-enter {
+    margin-left: 30px;
+}
+.fade-in-right-leave-active {
+    margin-left: -30px;
+}
