@@ -1,6 +1,6 @@
-.vscode/
-.svn/
-dist/
-node_modules/
+/.vscode/
+/.svn/
+/dist/
+/node_modules/
 
 /yarn.lock
