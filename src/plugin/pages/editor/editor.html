@@ -332,7 +332,8 @@
 
                 <div class="refresh" :class="{loading: loading}"
                     @click="getRecommendDataByInputText">
-                    <!--<button><i class="icon icon-refresh"></i> 换一批看看</button>-->
+                    <button><i class="icon icon-refresh"></i> 换一批看看</button>
+                    &nbsp;
                     <button @click.stop="toggleLock">
                         <span class="cssarrow">{{ isLocked ? '同步推荐 (已关闭)' : '同步推荐 (已开启)' }}</span>
                         <i class="icon"
