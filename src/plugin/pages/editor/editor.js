@@ -349,7 +349,7 @@ export default {
                 let text = this.editor.nodeText.content,
                 node = this.editor.focusNode;
 
-                this.typeing = true;
+                // this.typeing = true;
                 this.activeTab = 1;
 
                 this.$data.$inputText = text.replace(/&nbsp;/ig, '');
@@ -418,7 +418,8 @@ export default {
                             // console.log('success', repData);
                             this.typeing = false;
                             this.loading = false;
-                            this.recommendData = repData;
+                            if (repData && repData.length !== 0)
+                                this.recommendData = repData;
                             // this.resetScrollbar();
                         },
                         errData => {
