@@ -67,11 +67,13 @@
         }
     }
 
+    $stepWidth: 1120px;
+    $stepHeight: 560px;
     .step {
         // width: 542px;
         // height: 586px;
-        width: 760px;
-        height: 430px;
+        width: $stepWidth;
+        height: $stepHeight;
         position: absolute;
         left: 50%;
         // bottom: 124px;
@@ -176,10 +178,10 @@
 
             .contract-outline {
                 margin-top: 25px;
-                width: 666px;
-                max-width: 666px;
-                min-height: 220px;
-                max-height: 220px;
+                width: $stepWidth - 145px;
+                max-width: $stepWidth - 145px;
+                min-height: $stepHeight - 205px;
+                max-height: $stepHeight - 205px;
                 color: #000;
 
                 label {
@@ -259,8 +261,8 @@
             
             .outline-list {
                 width: 400px;
-                min-height: 60px;
-                max-height: 60px;
+                min-height: $stepHeight - 370px;
+                max-height: $stepHeight - 370px;
                 margin-top: 10px;
 
                 span {

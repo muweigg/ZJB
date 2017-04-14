@@ -57,7 +57,7 @@
             init () {
                 this.selected = null;
                 this.activeSlide = 1;
-                this.chunkData = _chunk(this.items, this.line * 6);
+                this.chunkData = _chunk(this.items, this.line * 8);
                 this.lastSlide = this.chunkData.length;
                 if (this.chunkData.length !== 0)
                     this.selected = this.chunkData[0][0].id;
@@ -87,7 +87,7 @@
 @import '../scss/icons.scss';
 
 // $slideWidth: 382px;
-$slideWidth: 100px * 6 - 10px;
+$slideWidth: 120px * 8 - 10px;
 $slideHeight: 52px;
 $slideArrowMargin: -12px;
 
