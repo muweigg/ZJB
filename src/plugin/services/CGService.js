@@ -9,7 +9,11 @@ import _, { isArray } from 'lodash';
 
 export default new class CGService {
 
-    constructor () {}
+    debug = false;
+
+    constructor () {
+        this.debug = /test/.test(window.location.href);
+    }
 
     // 获取合同领域，类型数据
     getFieldData () {
@@ -77,6 +81,9 @@ export default new class CGService {
     }) {
         let url = 'http://www.idophin.com/xunsearch.php';
         return new Promise((resolve, reject) => {
+            if (this.debug)
+                params.test = 1
+                
             $.post(
                 url,
                 params, 
