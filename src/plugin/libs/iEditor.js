@@ -171,7 +171,7 @@ class iEditor {
      * @memberOf iEditor
      */
     clearNodeId = node => {
-        if (node && node.textContent.length === 0)
+        if (node && node.nodeName !== 'DIV' && node.textContent.length === 0)
             node.id = '';
     }
 
@@ -601,9 +601,10 @@ class iEditor {
      */
     boundaryCheck = () => {
         _.defer(() => {
-            let node = this.getNode(),
-                li = this.editor.querySelector('ol').firstChild;
+            let node = this.getNode();
+
             try {
+                let li = this.editor.querySelector('ol').firstChild;
                 if (node.nodeName !== 'OL' && node.nodeName !== 'LI')
                     this.setCaret(li);
             } catch (e) {}
@@ -820,11 +821,13 @@ class iEditor {
      * @memberOf iEditor
      */
     getNode = (isEnd = false) => {
-        let range = this.getRange();
-        let node = isEnd ? range.endContainer : range.startContainer;
-        if (node.nodeType === 3 || node.nodeName === 'BR')
-            node = node.parentNode;
-        return node;
+        try {
+            let range = this.getRange();
+            let node = isEnd ? range.endContainer : range.startContainer;
+            if (node.nodeType === 3 || node.nodeName === 'BR')
+                node = node.parentNode;
+            return node;
+        } catch (e) {}
     }
 
     /**
