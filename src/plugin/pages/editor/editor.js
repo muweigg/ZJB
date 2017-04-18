@@ -384,7 +384,7 @@ export default {
         /**
          * 根据输入文本获取推荐数据
          */
-        getRecommendDataByInputText () {
+        getRecommendDataByInputText (isrand = 0) {
             this.loading = true;
 
             if (!this.$data.$debounced) {
@@ -410,7 +410,8 @@ export default {
                         subsidiary: this.$data.$subsidiary,
                         nexttext: nexttext,
                         otherlist: otherlist,
-                        nextidlist: [...nextidlist]
+                        nextidlist: [...nextidlist],
+                        isrand: isrand
                     }
 
                     CGService.getRecommendData(params).then(
