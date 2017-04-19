@@ -100,7 +100,9 @@ export default {
 
             editor: null,
             editorEl: null,
-            editorVM: null
+            editorVM: null,
+
+            isrand: 0
         }
     },
     components: {
@@ -384,8 +386,10 @@ export default {
         /**
          * 根据输入文本获取推荐数据
          */
-        getRecommendDataByInputText (isrand = 0) {
+        getRecommendDataByInputText (isrand = false) {
             this.loading = true;
+
+            this.isrand = isrand ? 1 : 0;
 
             if (!this.$data.$debounced) {
                 this.$data.$debounced = _.debounce(() => {
@@ -411,7 +415,7 @@ export default {
                         nexttext: nexttext,
                         otherlist: otherlist,
                         nextidlist: [...nextidlist],
-                        isrand: isrand
+                        isrand: this.isrand
                     }
 
                     CGService.getRecommendData(params).then(
