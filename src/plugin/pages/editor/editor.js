@@ -426,13 +426,13 @@ export default {
                             if (repData && repData.length !== 0) {
                                 this.recommendData = repData;
                                 this.$nextTick(() => {
-                                    let elementSize = this.$refs.terms.getSize();
-                                    let areaHeight = elementSize.scrollAreaHeight;
-                                    let wrapperHeight = elementSize.scrollWrapperHeight;
-                                    if (areaHeight < wrapperHeight) {
+                                    // let elementSize = this.$refs.terms.getSize();
+                                    // let areaHeight = elementSize.scrollAreaHeight;
+                                    // let wrapperHeight = elementSize.scrollWrapperHeight;
+                                    // if (areaHeight < wrapperHeight) {
                                         this.$refs.terms.vMovement = 0;
                                         this.$refs.terms.top = 0;
-                                    }
+                                    // }
                                 });
                             }
                             // this.resetScrollbar();
